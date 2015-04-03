@@ -8,13 +8,13 @@ Angular directive of Material Design morphing hamburger menu toggle. It's based 
 ##Usage
 
 * Add dependency  
-  ```js
+```js
   angular.module('myApp', ['ngHamburger']);
-  ```
+```
 * Use directive  
-  ```html
-    <hamburger-toggle state="stateModel"></hamburger-toggle>
-  ```
+```html
+  <hamburger-toggle state="stateModel"></hamburger-toggle>
+```
 
 `state` attribute is for two way bound model that will be toggled. Initially can be `true`, `false` or `undefined`.
 
