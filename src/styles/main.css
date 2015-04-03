@@ -1,0 +1,7 @@
+.material-design-hamburger button {
+  outline: none;
+}
+
+.material-design-hamburger .material-design-hamburger__icon {
+  padding: 1rem 1rem;
+}
