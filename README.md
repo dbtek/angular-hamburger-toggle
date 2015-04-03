@@ -3,6 +3,8 @@ Angular Hamburger Toggle
 
 Angular directive of Material Design morphing hamburger menu toggle. It's based off of [Material Design Hamburger](https://github.com/swirlycheetah/material-design-hamburger).
 
+![toggle-gif](https://i.imgur.com/B0PT1Lb.gif)
+
 ##Install
 
 ##Usage
