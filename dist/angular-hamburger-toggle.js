@@ -1,8 +1,9 @@
 /*!
  * angular-hamburger-toggle - v0.1.0
- * 
+ * https://github.com/dbtek/angular-hamburger-toggle
  * 2015-04-03
- * Copyright (c) 2015 Egemsoft
+ * İsmail Demirbilek
+ * MIT License
  */
 
 (function() {
