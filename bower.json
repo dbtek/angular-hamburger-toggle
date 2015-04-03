@@ -9,5 +9,28 @@
     "angular-mocks": ">=1.2.0"
   },
   "appPath": "src",
-  "moduleName": "angularHamburgerToggleApp"
+  "moduleName": "angularHamburgerToggleApp",
+  "authors": [
+    "İsmail Demirbilek <ce.demirbilek@gmail.com>"
+  ],
+  "description": "Material Design morphing hamburger menu toggle for Angular JS.",
+  "main": [
+    "dist/angular-hamburger-toggle.css",
+    "dist/angular-hamburger-toggle.js"
+  ],
+  "keywords": [
+    "angular",
+    "morphing",
+    "material",
+    "design",
+    "toggle"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
