@@ -21,7 +21,8 @@ module.exports = (grunt) ->
             ' * <%= pkg.name %> - v<%= pkg.version %>\n' +
             ' * <%= pkg.homepage %>\n' +
             ' * <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-            ' * Copyright (c) <%= grunt.template.today("yyyy") %> Egemsoft\n' +
+            ' * İsmail Demirbilek\n' +
+            ' * MIT License\n' +
             ' */\n'
 
     copy:
