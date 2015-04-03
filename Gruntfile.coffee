@@ -41,7 +41,6 @@ module.exports = (grunt) ->
             src: [
               "*.{ico,png,txt}"
               ".htaccess"
-              "*.html"
               "fonts/{,*/}*.*"
             ]
           }
