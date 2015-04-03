@@ -31,6 +31,13 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "src",
+    "test",
+    ".*",
+    "Gruntfile.coffee",
+    "README.md",
+    "index.html",
+    "package.json"
   ]
 }
