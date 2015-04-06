@@ -1,5 +1,5 @@
 /*!
- * angular-hamburger-toggle - v0.1.1
+ * angular-hamburger-toggle - v0.1.2
  * https://github.com/dbtek/angular-hamburger-toggle
  * 2015-04-06
  * İsmail Demirbilek
@@ -12,6 +12,28 @@
 
 .material-design-hamburger .material-design-hamburger__icon {
   padding: 1rem 1rem;
+}
+
+/* bootstrap navbar header support */
+.navbar .navbar-header .material-design-hamburger {
+ float: left;
+ position: relative;
+ top: 14px;
+ left: -8px;
+ margin-right: 0px;
+}
+.navbar .navbar-header .material-design-hamburger .material-design-hamburger__layer {
+  background: #ddd;
+}
+.navbar.navbar-inverse .navbar-header .material-design-hamburger .material-design-hamburger__layer {
+  background: #fff;
+}
+/* xs screens */
+@media (max-width: 767px) {
+ .navbar .navbar-header .material-design-hamburger {
+   margin-left: 0px;
+   margin-right: -15px;
+ }
 }
 /**
  * Material Design Hamburger

@@ -1,5 +1,5 @@
 /*!
- * angular-hamburger-toggle - v0.1.1
+ * angular-hamburger-toggle - v0.1.2
  * https://github.com/dbtek/angular-hamburger-toggle
  * 2015-04-06
  * İsmail Demirbilek

@@ -1,7 +1,7 @@
 {
   "name": "angular-hamburger-toggle",
   "homepage": "https://github.com/dbtek/angular-hamburger-toggle",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "dependencies": {
     "angular": ">=1.2.0"
   },
