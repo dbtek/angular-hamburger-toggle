@@ -21,3 +21,10 @@
 .material-design-hamburger .material-design-hamburger__icon {
   padding: 1rem 1rem;
 }
+
+/* xs screens */
+@media (max-width: 767px) {
+ .navbar .navbar-header .material-design-hamburger {
+   left: 5px;
+ }
+}
