@@ -3,6 +3,7 @@
  * https://github.com/swirlycheetah/material-design-hamburger
  * License: MIT
  */
+
 .material-design-hamburger button {
   display: block;
   border: none;
@@ -16,24 +17,28 @@
 
 .material-design-hamburger__layer {
   display: block;
-  width: 25px;
-  height: 3px;
+  width: 100px;
+  height: 10px;
   background: #111;
   position: relative;
-  animation-duration: 300ms;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .material-design-hamburger__layer:before, .material-design-hamburger__layer:after {
   display: block;
   width: inherit;
-  height: 3px;
+  height: 10px;
   position: absolute;
   background: inherit;
   left: 0;
   content: '';
-  animation-duration: 300ms;
-  animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 300ms;
+          animation-duration: 300ms;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
 }
 
 .material-design-hamburger__layer:before {
@@ -45,37 +50,67 @@
 }
 
 .material-design-hamburger__icon--to-arrow {
-  animation-name: material-design-hamburger__icon--slide;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: material-design-hamburger__icon--slide;
+          animation-name: material-design-hamburger__icon--slide;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .material-design-hamburger__icon--to-arrow:before {
-  animation-name: material-design-hamburger__icon--slide-before;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: material-design-hamburger__icon--slide-before;
+          animation-name: material-design-hamburger__icon--slide-before;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .material-design-hamburger__icon--to-arrow:after {
-  animation-name: material-design-hamburger__icon--slide-after;
-  animation-fill-mode: forwards;
+  -webkit-animation-name: material-design-hamburger__icon--slide-after;
+          animation-name: material-design-hamburger__icon--slide-after;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .material-design-hamburger__icon--from-arrow {
-  animation-name: material-design-hamburger__icon--slide-from;
+  -webkit-animation-name: material-design-hamburger__icon--slide-from;
+          animation-name: material-design-hamburger__icon--slide-from;
 }
 
 .material-design-hamburger__icon--from-arrow:before {
-  animation-name: material-design-hamburger__icon--slide-before-from;
+  -webkit-animation-name: material-design-hamburger__icon--slide-before-from;
+          animation-name: material-design-hamburger__icon--slide-before-from;
 }
 
 .material-design-hamburger__icon--from-arrow:after {
-  animation-name: material-design-hamburger__icon--slide-after-from;
+  -webkit-animation-name: material-design-hamburger__icon--slide-after-from;
+          animation-name: material-design-hamburger__icon--slide-after-from;
+}
+
+@-webkit-keyframes material-design-hamburger__icon--slide {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
 }
 
 @keyframes material-design-hamburger__icon--slide {
   0% {
   }
   100% {
-    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes material-design-hamburger__icon--slide-before {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin: 3% 37%;
+    width: 75%;
   }
 }
 
@@ -83,8 +118,20 @@
   0% {
   }
   100% {
-    transform: rotate(45deg);
-    margin: 0% 37%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin: 3% 37%;
+    width: 75%;
+  }
+}
+
+@-webkit-keyframes material-design-hamburger__icon--slide-after {
+  0% {
+  }
+  100% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin: 3% 37%;
     width: 75%;
   }
 }
@@ -93,15 +140,37 @@
   0% {
   }
   100% {
-    transform: rotate(-45deg);
-    margin: 0% 37%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin: 3% 37%;
     width: 75%;
+  }
+}
+
+@-webkit-keyframes material-design-hamburger__icon--slide-from {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
   }
 }
 
 @keyframes material-design-hamburger__icon--slide-from {
   0% {
-    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes material-design-hamburger__icon--slide-before-from {
+  0% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin: 3% 37%;
+    width: 75%;
   }
   100% {
   }
@@ -109,8 +178,20 @@
 
 @keyframes material-design-hamburger__icon--slide-before-from {
   0% {
-    transform: rotate(45deg);
-    margin: 0% 37%;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    margin: 3% 37%;
+    width: 75%;
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes material-design-hamburger__icon--slide-after-from {
+  0% {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin: 3% 37%;
     width: 75%;
   }
   100% {
@@ -119,8 +200,9 @@
 
 @keyframes material-design-hamburger__icon--slide-after-from {
   0% {
-    transform: rotate(-45deg);
-    margin: 0% 37%;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    margin: 3% 37%;
     width: 75%;
   }
   100% {
