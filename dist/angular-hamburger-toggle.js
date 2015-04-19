@@ -1,7 +1,7 @@
 /*!
- * angular-hamburger-toggle - v0.1.1
+ * angular-hamburger-toggle - v0.2.0
  * https://github.com/dbtek/angular-hamburger-toggle
- * 2015-04-06
+ * 2015-04-20
  * İsmail Demirbilek
  * MIT License
  */
@@ -39,13 +39,15 @@
       },
       templateUrl: 'views/hamburger-toggle.html',
       link: function($scope, $element, $attrs) {
-        return $scope.toggleState = function() {
-          $scope.state = !$scope.state;
-          if ($scope.state) {
-            $scope.iconClass = 'material-design-hamburger__icon--to-arrow';
-          } else {
-            $scope.iconClass = 'material-design-hamburger__icon--from-arrow';
-          }
+
+        /**
+          * @ngdoc object
+          * @name toggleState
+          * @methodOf ngHamburger.directive:hamburgerToggle
+          * @description Toggles two way bound model.
+         */
+        $scope.toggleState = function() {
+          return $scope.state = !$scope.state;
         };
       }
     };
@@ -57,7 +59,7 @@ angular.module('ngHamburger').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('views/hamburger-toggle.html',
-    "<div class=\"material-design-hamburger\"><button class=\"material-design-hamburger__icon\" ng-click=\"toggleState()\"><span class=\"material-design-hamburger__layer\" ng-class=\"iconClass\"></span></button></div>"
+    "<div class=\"material-design-hamburger\"><button class=\"material-design-hamburger__icon\" ng-click=\"toggleState()\"><span class=\"material-design-hamburger__layer\" ng-class=\"'material-design-hamburger__icon--' + (state ? 'to' : 'from') + '-arrow'\"></span></button></div>"
   );
 
 }]);
