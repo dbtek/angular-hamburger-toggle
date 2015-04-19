@@ -1,6 +1,7 @@
 <div class="material-design-hamburger">
   <button class="material-design-hamburger__icon" ng-click="toggleState()">
-    <span class="material-design-hamburger__layer" ng-class="iconClass">
+    <span class="material-design-hamburger__layer"
+      ng-class="'material-design-hamburger__icon--' + (state ? 'to' : 'from') + '-arrow'">
     </span>
   </button>
 </div>

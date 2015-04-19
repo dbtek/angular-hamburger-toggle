@@ -15,17 +15,14 @@ angular.module 'ngHamburger'
       state: '='
     templateUrl: 'views/hamburger-toggle.html'
     link: ($scope, $element, $attrs) ->
-      # sets iconClass on scope
-      setClass = ->
-        if $scope.state
-          $scope.iconClass = 'material-design-hamburger__icon--to-arrow'
-        else
-          $scope.iconClass = 'material-design-hamburger__icon--from-arrow'
-        return
 
+      ###*
+       # @ngdoc object
+       # @name toggleState
+       # @methodOf ngHamburger.directive:hamburgerToggle
+       # @description Toggles two way bound model.
+      ###
       $scope.toggleState = ->
         $scope.state = !$scope.state
-        do setClass
 
-      # set initial class
-      do setClass
+      return

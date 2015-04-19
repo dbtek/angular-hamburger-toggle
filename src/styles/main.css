@@ -1,11 +1,17 @@
 .material-design-hamburger {
-  transform: scale(0.27);
   width: 120px;
   margin-left: -46px;
 }
+:not(.navbar) .material-design-hamburger {
+  transform: scale(0.27);
+}
 .navbar .material-design-hamburger {
   position: absolute;
-
+  top: 11px;
+  transform: scale(0.22);
+}
+.navbar .material-design-hamburger__layer {
+  background: #777;
 }
 
 .material-design-hamburger button {
