@@ -11,6 +11,13 @@
     <link rel="stylesheet" href="dist/angular-hamburger-toggle.css">
   </head>
   <style>
+    .content {
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+    }
+    .content.sidenav-open {
+      padding-left: 330px;
+    }
     .sidenav {
       width: 0;
       overflow: hidden;
@@ -31,6 +38,9 @@
       position: absolute;
       top: 18px;
       left: 5px;
+    }
+    .navbar {
+      z-index: 100;
     }
     .navbar-brand {
       margin-left: 25px !important;
@@ -77,14 +87,16 @@
       </ul>
     </div>
 
-    <div class="container panel">
-      <h3>Usage</h3>
-      <pre>angular.module('myApp', ['ngHamburger']);</pre>
-      <pre><xmp><hamburger-toggle state="tgState"></hamburger-toggle></xmp></pre>
+    <div class="content" ng-class="{'sidenav-open': tgState}">
+      <div class="container panel">
+        <h3>Usage</h3>
+        <pre>angular.module('myApp', ['ngHamburger']);</pre>
+        <pre><xmp><hamburger-toggle state="tgState"></hamburger-toggle></xmp></pre>
 
-      <h3>Two Way Binding</h3>
-      <p>Click toggle to see model change.</p>
-      <code>$scope.tgState: {{tgState}}</code>
+        <h3>Two Way Binding</h3>
+        <p>Click toggle to see model change.</p>
+        <code>$scope.tgState: {{tgState}}</code>
+      </div>
     </div>
 
     <div class="footer text-center">
@@ -117,7 +129,7 @@
     <script type="text/javascript">
       angular.module('ngHamburgerDemo', ['ngHamburger'])
         .controller('MainCtrl', function($scope) {
-          $scope.tgState = false;
+          $scope.tgState = true;
         });
     </script>
 </body>
