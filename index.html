@@ -7,10 +7,18 @@
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.4/paper/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://rawgit.com/dbtek/angular-aside/master/dist/css/angular-aside.css">
     <link rel="stylesheet" href="dist/angular-hamburger-toggle.css">
   </head>
   <style>
+    .navbar .hamburger-toggle {
+      top: 18px;
+    }
+    .hamburger-toggle .material-design-hamburger__layer {
+      background: #666;
+    }
+
     .content {
       transition: all 0.2s ease-in-out;
       -webkit-transition: all 0.2s ease-in-out;
@@ -23,22 +31,19 @@
       overflow: hidden;
       position: fixed;
       left: 0;
-      top: 64px;
+      top: 65px;
       bottom: 0;
       transition: all 0.2s ease-in-out;
       -webkit-transition: all 0.2s ease-in-out;
        box-shadow: 0 8px 17px rgba(0,0,0,.2);
       -webkit-box-shadow: 0 8px 17px rgba(0,0,0,.2);
       background: #fff;
+      z-index: 10;
     }
     .sidenav.open {
       width: 300px;
     }
-    .hamburger-toggle {
-      position: absolute;
-      top: 18px;
-      left: 5px;
-    }
+
     .navbar {
       z-index: 100;
     }
@@ -69,12 +74,6 @@
               Angular Hamburger Toggle
             </a>
           </div>
-
-          <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="https://github.com/dbtek/angular-hamburger-toggle">Github</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -89,13 +88,34 @@
 
     <div class="content" ng-class="{'sidenav-open': tgState}">
       <div class="container panel">
-        <h3>Usage</h3>
-        <pre>angular.module('myApp', ['ngHamburger']);</pre>
-        <pre><xmp><hamburger-toggle state="tgState"></hamburger-toggle></xmp></pre>
+        <h3>Demo</h3>
+        <p>
+          Demo of Material Design morphing hamburger menu toggle for Angular JS.
+        </p>
+        <div class="text-center">
+          <a class="btn btn-default" onclick="window.open('https://twitter.com/intent/tweet?original_referer=http://dbtek.github.io/angular-hamburger-toggle&text=Material Design morphing hamburger menu toggle for Angular JS&tw_p=tweetbutton&url=https://github.com/dbtek/angular-hamburger-toggle&via=dbtek', 'newwindow', 'width=450, height=350'); return false;">
+            <i class="fa fa-twitter fa-2x"></i>
+          </a>
+          <a class="btn btn-default">
+            <i class="fa fa-github fa-2x"></i>
+          </a>
+        </div>
 
         <h3>Two Way Binding</h3>
         <p>Click toggle to see model change.</p>
         <code>$scope.tgState: {{tgState}}</code>
+        <p>
+          <hamburger-toggle state="tgState" class="hamburger-toggle"></hamburger-toggle>
+        </p>
+
+        <h3>Install</h3>
+        <pre>$ bower install angular-hamburger-toggle</pre>
+
+        <h3>Usage</h3>
+        <pre>angular.module('myApp', ['ngHamburger']);</pre>
+        <pre><xmp><hamburger-toggle state="tgState"></hamburger-toggle></xmp></pre>
+
+
       </div>
     </div>
 
@@ -112,25 +132,22 @@
 
     <div class="clearfix"></div>
 
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
     <script src="dist/angular-hamburger-toggle.js"></script>
     <script type="text/javascript">
       angular.module('ngHamburgerDemo', ['ngHamburger'])
         .controller('MainCtrl', function($scope) {
-          $scope.tgState = true;
+          $scope.tgState = false;
         });
+    </script>
+    <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-46512232-7');
+       ga('send', 'pageview');
     </script>
 </body>
 </html>
