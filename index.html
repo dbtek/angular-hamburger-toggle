@@ -58,6 +58,20 @@
       bottom: 0;
       width: 100%;
     }
+    .adsbygoogle {
+      width: 320px !important;
+      height: 270px !important;
+      border-radius: 4px;
+      border: 1px solid #eee;
+      padding: 10px;
+    }
+    @media (max-width: 940px) {
+      .adsbygoogle {
+        float: none !important;
+        width: 100% !important;
+        text-align: center;
+      }
+    }
   </style>
   <body ng-app="ngHamburgerDemo" ng-controller="MainCtrl">
     <!--[if lt IE 7]>
@@ -89,6 +103,10 @@
     <div class="content" ng-class="{'sidenav-open': tgState}">
       <div class="container panel">
         <h3>Demo</h3>
+        <ins class="adsbygoogle pull-right"
+               style="display:inline-block;width:300px;height:250px"
+               data-ad-client="ca-pub-7616772085785107"
+               data-ad-slot="7971084020"></ins>
         <p>
           Demo of Material Design morphing hamburger menu toggle for Angular JS.
         </p>
@@ -145,6 +163,10 @@
 
        ga('create', 'UA-46512232-7');
        ga('send', 'pageview');
+    </script>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
 </body>
 </html>
