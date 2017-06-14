@@ -5,19 +5,19 @@ Angular directive of Material Design morphing hamburger menu toggle. It's based 
 
 ![toggle-gif](https://i.imgur.com/B0PT1Lb.gif)
 
-###Features
+### Features
 * Two way bound state model.
 * Tuned for Bootstrap.
 * Super easy.
 
-###[Demo](http://dbtek.github.io/angular-hamburger-toggle)
+### [Demo](http://dbtek.github.io/angular-hamburger-toggle)
 
-##Install
+## Install
 ```bash
  $ bower install angular-hamburger-toggle --save
 ```
 
-##Usage
+## Usage
 
 * Add dependency  
 ```js
@@ -30,8 +30,8 @@ Angular directive of Material Design morphing hamburger menu toggle. It's based 
 
 `state` attribute is for two way bound model that will be toggled. Initially can be `true`, `false` or `undefined`.
 
-##Credits
+## Credits
 [Material Design Hamburger](https://github.com/swirlycheetah/material-design-hamburger)
 
-##Author
+## Author
 İsmail Demirbilek - [@dbtek](https://twitter.com/dbtek)
